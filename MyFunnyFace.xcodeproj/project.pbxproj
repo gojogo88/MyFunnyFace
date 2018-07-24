@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6CB789822106C1570023003C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB789812106C1570023003C /* AppDelegate.swift */; };
-		6CB789842106C1570023003C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB789832106C1570023003C /* ViewController.swift */; };
-		6CB789872106C1570023003C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB789852106C1570023003C /* Main.storyboard */; };
+		6CB789842106C1570023003C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB789832106C1570023003C /* MainVC.swift */; };
 		6CB789892106C1580023003C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB789882106C1580023003C /* Assets.xcassets */; };
 		6CB7898C2106C1580023003C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB7898A2106C1580023003C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		6CB7897E2106C1570023003C /* MyFunnyFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFunnyFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB789812106C1570023003C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6CB789832106C1570023003C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6CB789862106C1570023003C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CB789832106C1570023003C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		6CB789882106C1580023003C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CB7898B2106C1580023003C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CB7898D2106C1580023003C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				6CB789812106C1570023003C /* AppDelegate.swift */,
-				6CB789832106C1570023003C /* ViewController.swift */,
-				6CB789852106C1570023003C /* Main.storyboard */,
+				6CB789832106C1570023003C /* MainVC.swift */,
 				6CB789882106C1580023003C /* Assets.xcassets */,
 				6CB7898A2106C1580023003C /* LaunchScreen.storyboard */,
 				6CB7898D2106C1580023003C /* Info.plist */,
@@ -124,7 +121,6 @@
 			files = (
 				6CB7898C2106C1580023003C /* LaunchScreen.storyboard in Resources */,
 				6CB789892106C1580023003C /* Assets.xcassets in Resources */,
-				6CB789872106C1570023003C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CB789842106C1570023003C /* ViewController.swift in Sources */,
+				6CB789842106C1570023003C /* MainVC.swift in Sources */,
 				6CB789822106C1570023003C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6CB789852106C1570023003C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6CB789862106C1570023003C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6CB7898A2106C1580023003C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,7 +278,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdelight.MyFunnyFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -308,7 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdelight.MyFunnyFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
