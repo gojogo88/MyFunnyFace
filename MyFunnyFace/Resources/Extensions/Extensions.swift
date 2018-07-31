@@ -52,6 +52,15 @@ extension UIView {
         }
     }
     
+    func anchorSize(to view: UIView) {
+        widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+    }
+    
+    func fillSuperView() {
+        setAnchor(top: superview?.topAnchor, left: superview?.leadingAnchor, bottom: superview?.bottomAnchor, right: superview?.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+    }
+    
     var safeTopAnchor: NSLayoutYAxisAnchor {
         if #available(iOS 11.0, *) {
             return safeAreaLayoutGuide.topAnchor
