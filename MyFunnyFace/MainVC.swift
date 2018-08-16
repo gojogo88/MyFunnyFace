@@ -18,6 +18,7 @@ class MainVC: UIViewController {
         setupView()
         
         //to get all the fonts in the system
+      /*
         for family: String in UIFont.familyNames
         {
             print("\(family)")
@@ -26,6 +27,7 @@ class MainVC: UIViewController {
                 print("== \(names)")
             }
         }
+ */
     }
 
     fileprivate func setupView() {
@@ -33,8 +35,14 @@ class MainVC: UIViewController {
         mainView = mainVCView
         view.addSubview(mainView)
         mainView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+      
+      mainView.settingsAction = settingsPressed
     }
 
-
+  fileprivate func settingsPressed() {
+    let menuVC = MenuVC()
+    present(menuVC, animated: true, completion: nil)
+  }
+  
 }
 

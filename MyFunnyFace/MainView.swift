@@ -10,75 +10,59 @@ import UIKit
 
 class MainView: UIView {
   
+  var settingsAction: (() -> Void)?
+  
   let bgImageView: UIImageView = {
-    let iv = UIImageView()
-    iv.image = UIImage(named: "bgImage")
-    iv.contentMode = .scaleAspectFit
+    let iv = UIImageView(imageName: "bgImage")
     return iv
   }()
   
   let newGameBtn: UIButton = {
-    let button = UIButton()
-    
-    button.setImage(UIImage(named: "newGame"), for: .normal)
-    button.setAnchor(width: 0, height: 0)
-    return button
+    let btn = UIButton(imageName: "newGame")
+    btn.addTarget(self, action: #selector(handleNewGame), for: .touchUpInside)
+    return btn
   }()
   
   let newGameLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont(name: "ChalkboardSE-Bold", size: 26)
-    label.text = "new game"
-    label.textColor = .myBlue
-    label.setAnchor(width: 0, height: 0)
+    let label = UILabel(title: "gallery", fontName: "ChalkboardSE-Bold", fontSize: 26, color: .myBlue)
     return label
   }()
   
   let galleryBtn: UIButton = {
-    let button = UIButton()
-    button.setImage(UIImage(named: "pictureFrame"), for: .normal)
-    button.setAnchor(width: 0, height: 0)
-    return button
+    let btn = UIButton(imageName: "pictureFrame")
+    btn.addTarget(self, action: #selector(handleGallery), for: .touchUpInside)
+    return btn
   }()
   
   let galleryLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont(name: "ChalkboardSE-Bold", size: 26)
-    label.text = "gallery"
-    label.textColor = .myBlue
-    label.setAnchor(width: 0, height: 0)
+    let label = UILabel(title: "new game", fontName: "ChalkboardSE-Bold", fontSize: 26, color: .myBlue)
     return label
   }()
   
   let introView: UIView = {
     let narrView = UIView()
-    narrView.backgroundColor = .red
+    narrView.backgroundColor = .clear
     return narrView
   }()
   
   let narratorPic: UIImageView = {
-    let iv = UIImageView()
-    iv.image = UIImage(named: "mouthClose")
-    iv.contentMode = .scaleAspectFit
+    let iv = UIImageView(imageName: "mouthClose")
     return iv
   }()
   
-  
   let chatBubbleBg: UIImageView = {
-    let iv = UIImageView()
-    iv.image = UIImage(named: "chatBubble")
-    iv.contentMode = .scaleAspectFit
+    let iv = UIImageView(imageName: "chatBubble")
     iv.alpha = 0
     return iv
   }()
   
-  let welcomeLabel: UILabel = {
-    let lbl = UILabel()
-    lbl.font = UIFont(name: "ChalkboardSE-Bold", size: 60)
-    lbl.textColor = .black
-    lbl.textAlignment = .center
-    lbl.text = ""
-    return lbl
+  let welcomeLabel = UILabel.mainText
+  
+  let settingsBtn: UIButton = {
+    let btn = UIButton()
+    btn.setImage(UIImage(named: "showSettingBtn"), for: .normal)
+    btn.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+    return btn
   }()
   
   lazy var newGameBtnBgView = ButtonBgView(button: newGameBtn, label: newGameLabel)
@@ -104,14 +88,16 @@ class MainView: UIView {
       bottomHeight = 152
       narrWidth = 1124
       narrHeight = 174
+      welcomeLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 70)
     } else {
       spacing = 220
       bottomHeight = 110
       narrWidth = 840
       narrHeight = 130
+      welcomeLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 50)
     }
     
-    let stackView = mainStackView()
+    let stackView = createHorizontalStackView(views: [newGameBtnBgView, galleryBtnBgView])
     
     self.addSubview(bgImageView)
     bgImageView.setAnchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
@@ -153,28 +139,34 @@ class MainView: UIView {
     stackView.setAnchor(width: (self.frame.width - spacing), height: (self.frame.width - spacing) / 2.1)
     stackView.setAnchor(top: nil, left: nil, bottom: bgImageView.bottomAnchor, right: nil, paddingTop: 94, paddingLeft: 0, paddingBottom: -bottomHeight, paddingRight: 0)
     stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-  }
-  
-  func mainStackView() -> UIStackView {
-    let stackView = UIStackView(arrangedSubviews: [newGameBtnBgView, galleryBtnBgView])
-    stackView.axis = .horizontal
-    stackView.distribution = .fillProportionally
-    stackView.spacing = 20
     
-    return stackView
+    self.addSubview(settingsBtn)
+    settingsBtn.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    settingsBtn.setAnchor(top: nil, left: nil, bottom: self.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
   }
   
   fileprivate func animateWelcomeText() {
     let textToAnimate1 = "Welcome"
     let textToAnimate2 = "Please make a selection"
     
+    self.narratorPic.animationImages = [UIImage(named: "mouthClose")!, UIImage(named: "mouthOpen")!]
+    self.narratorPic.animationDuration = 0.5
+    self.narratorPic.animationRepeatCount = 2
+    
+    self.narratorPic.startAnimating()
+    
     for char in textToAnimate1 {
-      welcomeLabel.text! += "\(char)"
+      self.welcomeLabel.text! += "\(char)"
       RunLoop.current.run(until: Date()+0.18)
     }
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
       
+      self.narratorPic.animationImages = [UIImage(named: "mouthClose")!, UIImage(named: "mouthOpen")!]
+      self.narratorPic.animationDuration = 0.5
+      self.narratorPic.animationRepeatCount = 7
+      
+      self.narratorPic.startAnimating()
       UIView.animate(withDuration: 1, animations: {
         self.welcomeLabel.text = ""
       }, completion: { (finished) in
@@ -185,6 +177,19 @@ class MainView: UIView {
       })
       
     }
+  }
+  
+  
+  @objc func handleNewGame() {
+    
+  }
+  
+  @objc func handleGallery() {
+    
+  }
+  
+  @objc func handleSettings() {
+    settingsAction?()
   }
   
   required init?(coder aDecoder: NSCoder) {

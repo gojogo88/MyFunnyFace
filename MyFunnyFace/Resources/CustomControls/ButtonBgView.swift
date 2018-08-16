@@ -27,7 +27,7 @@ class ButtonBgView: UIView {
         button.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         addSubview(label)
-        label.setAnchor(top: button.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 12, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        label.setAnchor(top: button.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 10, paddingRight: 0)
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     

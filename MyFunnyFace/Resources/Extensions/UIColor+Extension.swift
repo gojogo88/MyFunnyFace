@@ -10,4 +10,5 @@ import UIKit
 
 extension UIColor {
     static let myBlue = UIColor(named: "myBlue")!
+    static let menuTextColor = UIColor(red: 76/255, green: 76/255, blue: 76/255, alpha: 1)
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C175B9A211D5C53004481E1 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C175B99211D5C53004481E1 /* SettingsVC.swift */; };
+		6C175B9C211D5C5F004481E1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C175B9B211D5C5F004481E1 /* SettingsView.swift */; };
+		6C623974211D670700CAE44E /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C623973211D670700CAE44E /* UIStackView+Extension.swift */; };
+		6C623976211D67DD00CAE44E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C623975211D67DD00CAE44E /* UILabel+Extension.swift */; };
+		6C623978211D6C2500CAE44E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C623977211D6C2500CAE44E /* UIImageView+Extension.swift */; };
 		6C6A2D90210FF024007D18AE /* ButtonBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6A2D8F210FF024007D18AE /* ButtonBgView.swift */; };
 		6C6A2D9321103CDC007D18AE /* DetectDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6A2D9221103CDC007D18AE /* DetectDevice.swift */; };
 		6CB789822106C1570023003C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB789812106C1570023003C /* AppDelegate.swift */; };
@@ -16,13 +21,19 @@
 		6CB789942106F0430023003C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB789932106F0430023003C /* MainView.swift */; };
 		6CB789962106F2210023003C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB789952106F2210023003C /* Extensions.swift */; };
 		6CB78998210706860023003C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB78997210706860023003C /* UIButton+Extension.swift */; };
-		6CB7899A210709BA0023003C /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB78999210709BA0023003C /* UIString+Extension.swift */; };
 		6CB7899C2107126A0023003C /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB7899B2107126A0023003C /* Theme.xcassets */; };
 		6CB7899E2107142C0023003C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB7899D2107142C0023003C /* UIColor+Extension.swift */; };
 		6CDAA01D211BF29F00DF5BC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6CDAA01F211BF29F00DF5BC3 /* Localizable.strings */; };
+		6CF7243C2123DA63000A0F3E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7243B2123DA63000A0F3E /* MenuView.swift */; };
+		6CF7243E2123DA8E000A0F3E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7243D2123DA8E000A0F3E /* MenuVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C175B99211D5C53004481E1 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		6C175B9B211D5C5F004481E1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6C623973211D670700CAE44E /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		6C623975211D67DD00CAE44E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		6C623977211D6C2500CAE44E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		6C6A2D8F210FF024007D18AE /* ButtonBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBgView.swift; sourceTree = "<group>"; };
 		6C6A2D9221103CDC007D18AE /* DetectDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectDevice.swift; sourceTree = "<group>"; };
 		6CB7897E2106C1570023003C /* MyFunnyFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFunnyFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +45,13 @@
 		6CB789932106F0430023003C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6CB789952106F2210023003C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6CB78997210706860023003C /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		6CB78999210709BA0023003C /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
 		6CB7899B2107126A0023003C /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		6CB7899D2107142C0023003C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6CDAA01A211BF20100DF5BC3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6CDAA01E211BF29F00DF5BC3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CDAA021211BF2CA00DF5BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6CF7243B2123DA63000A0F3E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		6CF7243D2123DA8E000A0F3E /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +91,10 @@
 			children = (
 				6CB789952106F2210023003C /* Extensions.swift */,
 				6CB78997210706860023003C /* UIButton+Extension.swift */,
-				6CB78999210709BA0023003C /* UIString+Extension.swift */,
 				6CB7899D2107142C0023003C /* UIColor+Extension.swift */,
+				6C623973211D670700CAE44E /* UIStackView+Extension.swift */,
+				6C623975211D67DD00CAE44E /* UILabel+Extension.swift */,
+				6C623977211D6C2500CAE44E /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -107,6 +121,10 @@
 				6CB789812106C1570023003C /* AppDelegate.swift */,
 				6CB789832106C1570023003C /* MainVC.swift */,
 				6CB789932106F0430023003C /* MainView.swift */,
+				6CF7243B2123DA63000A0F3E /* MenuView.swift */,
+				6CF7243D2123DA8E000A0F3E /* MenuVC.swift */,
+				6C175B99211D5C53004481E1 /* SettingsVC.swift */,
+				6C175B9B211D5C5F004481E1 /* SettingsView.swift */,
 				6C6A2D8D210FEFCF007D18AE /* Resources */,
 				6CB7898A2106C1580023003C /* LaunchScreen.storyboard */,
 				6CB7898D2106C1580023003C /* Info.plist */,
@@ -186,15 +204,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C623974211D670700CAE44E /* UIStackView+Extension.swift in Sources */,
 				6C6A2D9321103CDC007D18AE /* DetectDevice.swift in Sources */,
+				6C623978211D6C2500CAE44E /* UIImageView+Extension.swift in Sources */,
 				6CB7899E2107142C0023003C /* UIColor+Extension.swift in Sources */,
 				6CB789842106C1570023003C /* MainVC.swift in Sources */,
 				6CB789942106F0430023003C /* MainView.swift in Sources */,
-				6CB7899A210709BA0023003C /* UIString+Extension.swift in Sources */,
 				6CB789822106C1570023003C /* AppDelegate.swift in Sources */,
+				6CF7243C2123DA63000A0F3E /* MenuView.swift in Sources */,
 				6C6A2D90210FF024007D18AE /* ButtonBgView.swift in Sources */,
 				6CB78998210706860023003C /* UIButton+Extension.swift in Sources */,
+				6C623976211D67DD00CAE44E /* UILabel+Extension.swift in Sources */,
 				6CB789962106F2210023003C /* Extensions.swift in Sources */,
+				6C175B9A211D5C53004481E1 /* SettingsVC.swift in Sources */,
+				6C175B9C211D5C5F004481E1 /* SettingsView.swift in Sources */,
+				6CF7243E2123DA8E000A0F3E /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
